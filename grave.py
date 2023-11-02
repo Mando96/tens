@@ -1,28 +1,36 @@
 import random
-import time 
-from threading import Thread
+import time
 from itertools import islice
 
 tap = 0
 score = 0
+
 number_of_cards = 4
-num = 10
-start = 1
-end = 11
+
+num_quantity = 10
+first_num = 1
+last_num = 11
+
+running = True
+seconds = 10
+end = 0
+
+
+
 
 
 #Generate random numbers within a given range and store in a list
-def para(start, end, num):
+def para(first_num, last_num, num_quantity):
     res = []
  
-    for j in range(num):
-        res.append(random.randint(start, end))
+    for j in range(num_quantity):
+        res.append(random.randint(first_num, last_num))
 
     return res
 
-print(para(start, end, num))
+print(para(first_num, last_num, num_quantity))
 
-Input = para(start, end, num)
+Input = para(first_num, last_num, num_quantity)
  
 # list of length in which we have to split 
 length_to_split = [5,5] 
@@ -37,6 +45,8 @@ deck = [list(islice(Inputt, elem))
 
 print ("     ")    
 print ("Welcome to Tens .mark1.\n**********************\n")
+
+
 
 while number_of_cards > 0:
     #Generate a random int to be used as index

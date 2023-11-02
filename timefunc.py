@@ -1,24 +1,47 @@
 import time
-from threading import Thread
 
-answer = None
+#count up
+'''
+running = True
+seconds = 0
+end = 10
 
-def check():
-    time.sleep(2)
-    if answer != None:
-        return
-    print("Too Slow")
+while running:
+    print(seconds)
+    time.sleep(1)
+    seconds +=1
+    if seconds >= end :
+        running = False
+        print(seconds)
+print("Done")
 
-    
+'''
+#count down
 
-Thread(target = check).start()
+'''
+running = True
+seconds = 10
+end = 0
 
-answer = input("Input something: ")
+while running:
+    print(seconds)
+    time.sleep(1)
+    seconds -=1
+    if seconds <= end :
+        running = False
+        print(seconds)
+print("Game Over")
+'''
 
-#Timer func
-time_limit = 5
-start_time = time.time()
-print (start_time)
-''
-time_elapsed = time.time() - start_time
-print (time_elapsed)
+#Python countdown timer
+def countdown(time_sec): 
+    while time_sec: 
+        mins, secs = divmod(time_sec, 60) 
+        timeformat = '{:02d}:{:02d}'.format(mins,secs) 
+        print(timeformat,end='\r') 
+        time.sleep(1) 
+        time_sec -= 1
+
+    print("Timer Ended!")
+
+countdown(10) 
