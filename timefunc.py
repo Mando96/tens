@@ -32,7 +32,7 @@ while running:
         print(seconds)
 print("Game Over")
 '''
-
+'''
 #Python countdown timer
 def countdown(time_sec): 
     while time_sec: 
@@ -45,3 +45,14 @@ def countdown(time_sec):
     print("Timer Ended!")
 
 countdown(10) 
+'''
+
+
+time_limit = 5
+start_time = time.time()
+
+elapsed_time = time.time() - start_time
+print(time_limit - int(elapsed_time))
+if elapsed_time > time_limit:
+    print ("Game Over")
+    exit()
