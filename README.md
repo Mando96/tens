@@ -32,3 +32,10 @@ What is needed for this project:
 5. A way to check players anws are right or wrong 
 6. A way to store players score
 7. A way to store time 
+
+New Modifications to be made:
+1. 1 point for every correct guess on Multiple of 10: done
+2. 0 point for correct guess on non-multiple of 10: done
+3. end game after 3 wrong gueses: done 
+4. if first pair is 5,6 then the next pair should be 6,x and the next should be x,y: y,z etc: done
+5. Same numbers showing on the two sepreate decks
